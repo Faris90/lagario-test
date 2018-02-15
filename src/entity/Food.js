@@ -22,4 +22,6 @@ Food.prototype.calcMovePhys = function () {
 Food.prototype.onConsume = function(consumer,gameServer) {
     gameServer.currentFood--;
     consumer.addMass(gameServer.config.foodMass);
+ var client = consumer.owner;
+     client.color = this.color;
 }
