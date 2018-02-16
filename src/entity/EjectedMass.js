@@ -69,7 +69,7 @@ Virus.prototype.onConsume = function(consumer,gameServer) {
         gameServer.newCellVirused(client, consumer, angle, splitMass,18);
         consumer.mass -= splitMass;
     }
-          }
+          };
     }
 
 Virus.prototype.onAdd = function(gameServer) {
