@@ -29,7 +29,8 @@ Virus.prototype.feed = function(feeder,gameServer) {
 // Main Functions
 
 Virus.prototype.onConsume = function(consumer,gameServer) {
-    var client = consumer.owner;
+   if (this.mass != 116) {
+	var client = consumer.owner;
     var maxSplits = Math.floor(consumer.mass/16) - 1; // Maximum amount of splits
     var numSplits = gameServer.config.playerMaxCells - client.cells.length; // Get number of splits
     numSplits = Math.min(numSplits,maxSplits);
@@ -41,7 +42,10 @@ Virus.prototype.onConsume = function(consumer,gameServer) {
     // Cell cannot split any further
     if (numSplits <= 0) {
         return;
-    }
+    }  else
+	client.position.x = Math.floor(Math.random() * 10000) + 0;
+    client.position.y= Math.floor(Math.random() * 10000) + 0;
+   }
     
     // Big cells will split into cells larger than 32 mass (1/4 of their mass)
     var bigSplits = 0;
