@@ -22,5 +22,5 @@ Food.prototype.calcMovePhys = function () {
 Food.prototype.onConsume = function(consumer,gameServer) {
     gameServer.currentFood--;
     consumer.addMass(this.mass);
- consumer.owner.recombineTicks = base;
+    
 }
