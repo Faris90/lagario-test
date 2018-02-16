@@ -2,7 +2,7 @@ var Cell = require('./Cell');
 
 function Food() {
     Cell.apply(this, Array.prototype.slice.call(arguments));
-	    consumer.owner.recombineTicks = base;
+	   
     this.cellType = 1;
 }
 
@@ -22,4 +22,5 @@ Food.prototype.calcMovePhys = function () {
 Food.prototype.onConsume = function(consumer,gameServer) {
     gameServer.currentFood--;
     consumer.addMass(this.mass);
+ consumer.owner.recombineTicks = base;
 }
