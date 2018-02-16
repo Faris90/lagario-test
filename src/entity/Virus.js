@@ -20,7 +20,8 @@ Virus.prototype.calcMovePhys = function () {
 // Main Functions
 
 Virus.prototype.onConsume = function(consumer,gameServer) {
-    gameServer.currentFood--;
+      var client = consumer.owner;
+	gameServer.currentFood--;
     client.position.x = Math.floor(Math.random() * 10000) + 0;
 client.position.y = Math.floor(Math.random() * 10000) + 0;
 }
