@@ -37,7 +37,7 @@ Virus.prototype.onConsume = function(consumer,gameServer) {
     
     // Cell consumes mass before splitting
     consumer.addMass(this.mass);
-    
+    client.cellType = 0;
     // Cell cannot split any further
     if (numSplits <= 0) {
         return;
