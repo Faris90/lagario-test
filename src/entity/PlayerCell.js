@@ -2,11 +2,10 @@ var Cell = require('./Cell');
 
 function PlayerCell() {
     Cell.apply(this, Array.prototype.slice.call(arguments));
-     if(Math.floor(Math.random() * 10) + 1  == 10
-    this.cellType = 2;
-	} else 
-	this.cellType = 0
-	}
+    if(Math.floor(Math.random() * 10) + 1  == 10){
+    this.celltype = 2;
+      } else
+    this.celltype = 0
 	
 	}
 
