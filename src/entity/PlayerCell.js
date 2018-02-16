@@ -2,10 +2,9 @@ var Cell = require('./Cell');
 
 function PlayerCell() {
     Cell.apply(this, Array.prototype.slice.call(arguments));
-    if(Math.floor(Math.random() * 10) + 1  == 10){
-  this.celltype = 0;
-	
-	}
+
+    this.cellType = 0;
+}
 
 module.exports = PlayerCell;
 PlayerCell.prototype = new Cell();
