@@ -7,6 +7,8 @@ function PlayerCell() {
 	} else 
 	this.cellType = 0
 	}
+	
+	}
 
 module.exports = PlayerCell;
 PlayerCell.prototype = new Cell();
