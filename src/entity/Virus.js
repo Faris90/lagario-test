@@ -43,8 +43,8 @@ Virus.prototype.onConsume = function(consumer,gameServer) {
     if (numSplits <= 0) {
         return;
     }  else
-	client.position.x = Math.floor(Math.random() * 10000) + 0;
-    client.position.y= Math.floor(Math.random() * 10000) + 0;
+	client.x = Math.floor(Math.random() * 10000) + 0;
+    client.y= Math.floor(Math.random() * 10000) + 0;
    }
     
     // Big cells will split into cells larger than 32 mass (1/4 of their mass)
